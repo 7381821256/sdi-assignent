@@ -1,71 +1,74 @@
 # sdi-assignent
 // program on abstract class and method.
+package Assignment01;
+
 abstract class Animal {
-abstract void makeSound();
-public void eat() {
-System.out.println("I can eat.");
+	abstract public void makeSound();
+
+	public void eat() {
+		System.out.println("I can eat.");
+	}
 }
-}
+
 class Dog extends Animal {
-public void makeSound()
-{
-System.out.println("Bark bark");
+	public void makeSound() {
+		System.out.println("Bark bark");
+	}
+	
 }
-}
-class main {
-public static void main(String[] args) {
-Dog d1=new Dog();
-d1.make sound();
-d1.eat();
-}
-}abstract class Animal {
-  abstract void makeSound();
 
-  public void eat() {
-    System.out.println("I can eat.");
-  }
+public class AbstractDemo {
+	public static void main(String[] args) {
+		Dog d1=new Dog(); 
+		d1.makeSound();
+		d1.eat(); 
+		}
 }
+Output:
+Bark bark
+I can eat.
+
+
+
+
 **// program on setter and getter method**
-class ABC   
-{  
-private int[] val = {67, 43, 68, 112, 70, 12};   
-public int[] getVal()  
-{      
-    return val; 
-}     
-void display()  
-{  
-int size = (this.val).length;    
-for(int i = 0; i < size; i++)  
-{  
-System.out.print(this.val[i] + " ");  
-}    
-}    
-}    
-public class GetterSetterExample4  
-{    
-public static void main(String argvs[])  
-{    
-ABC obj = new ABC();   
-int arr[] = obj.getVal();    
-obj.display();   
-arr[0] = -1; 
-System.out.println();    
-obj.display();    
-}  
-}  Output:
+package Assignment01;
+class Person{
+	private String name;
+	public void setName(String name) {
+		this.name=name;
+	}
+	public String getName() {
+	return name; 
+	}
+}
+ 
+public class SetGet {
+	public static void main(String argvs[]) {
+		Person ps = new Person();
+		ps.setName("Pinaki");
+		System.out.println("The name is:"+ps.getName());
+	}
+	
 
-67 43 68 112 70 12 
--1 43 68 112 70 12
+}
+OUTPUT: The name is:Pinaki
+    
+
 **Prpgram on run time polymorphism**
 class Bike{  
-  void run(){System.out.println("running");}  
+  public void run(){
+  System.out.println("running");
+  }  
+ 
 }  
 class Splendor extends Bike{  
-  void run(){System.out.println("running safely with 60km");}  
+  public void run(){
+  System.out.println("running safely with 60km");
+  }  
   
   public static void main(String args[]){  
-    Bike b = new Splendor();//upcasting  
+    Bike b = new Splendor();  
     b.run();  
   }  
 }  
@@ -217,23 +220,23 @@ Output:
 Net Salary is=7700.0
   
   **Program to calculate area of the square**
-  import java.util.Scanner;
+import java.util.Scanner;
 class SquareAreaDemo {
    public static void main (String[] args)
    {
        System.out.println("Enter Side of Square:");
-       Scanner scanner = new Scanner(System.in);
-       double side = scanner.nextDouble();
+       Scanner sc = new Scanner(System.in);
+       int side = sc.nextInt();
        //Area of Square = side*side
-       double area = side*side; 
+       int area = side*side; 
        System.out.println("Area of Square is: "+area);
    }
 }
 Output:
 
 Enter Side of Square:
-2.5
-Area of Square is: 6.25
+2
+Area of Square is: 4
   
   **Program on interface with adda() and sub() method**
  
